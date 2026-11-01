@@ -69,7 +69,7 @@
 
       <div class="glass hero-media">
         <div class="media player">
-            <video src="assets/hero.mp4" autoplay muted loop playsinline preload="metadata" disablepictureinpicture disableremoteplayback tabindex="-1"></video>
+            <video data-src="assets/hero.mp4" poster="assets/hero-poster.jpg" muted loop playsinline preload="none" disablepictureinpicture disableremoteplayback tabindex="-1"></video>
             <button class="player-toggle" type="button">
               <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
               <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.2-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
@@ -132,10 +132,10 @@
         <div class="card tile span-6">
           <div class="img-pair">
             <div class="media wide">
-              <img src="assets/immagine-cinematica-1280.jpg" srcset="assets/immagine-cinematica-1280.jpg 1280w, assets/immagine-cinematica-2560.jpg 2560w" sizes="(max-width: 560px) 100vw, 50vw" width="2560" height="1088" data-full="assets/immagine-cinematica.png" data-full-size="8736 × 3712 · PNG 46 MB" alt="Cinematic image generated with FLUX" data-i18n-alt="alt.cinematic" loading="lazy">
+              <img loading="lazy" decoding="async" src="assets/immagine-cinematica-1280.jpg" srcset="assets/immagine-cinematica-1280.jpg 1280w, assets/immagine-cinematica-2560.jpg 2560w" sizes="(max-width: 560px) 100vw, 50vw" width="2560" height="1088" data-full="assets/immagine-cinematica.png" data-full-size="8736 × 3712 · PNG 46 MB" alt="Cinematic image generated with FLUX" data-i18n-alt="alt.cinematic" loading="lazy">
             </div>
             <div class="media square">
-              <img src="assets/immagine-quadrata-800.jpg" srcset="assets/immagine-quadrata-800.jpg 800w, assets/immagine-quadrata-1600.jpg 1600w" sizes="(max-width: 560px) 100vw, 25vw" width="1600" height="1600" data-full="assets/immagine-quadrata.png" data-full-size="5792 × 5792 · PNG 38 MB" alt="Square image generated with FLUX" data-i18n-alt="alt.square" loading="lazy">
+              <img loading="lazy" decoding="async" src="assets/immagine-quadrata-800.jpg" srcset="assets/immagine-quadrata-800.jpg 800w, assets/immagine-quadrata-1600.jpg 1600w" sizes="(max-width: 560px) 100vw, 25vw" width="1600" height="1600" data-full="assets/immagine-quadrata.png" data-full-size="5792 × 5792 · PNG 38 MB" alt="Square image generated with FLUX" data-i18n-alt="alt.square" loading="lazy">
             </div>
           </div>
           <div class="caption"><span class="card-title" data-i18n="img.t">Images</span><span class="badge" data-i18n="img.b">FLUX · LoRA · up to 8K</span></div>
@@ -144,19 +144,19 @@
 
         <div class="card tile span-3">
           <div class="media player">
-            <video src="assets/video.mp4" autoplay muted loop playsinline preload="metadata" disablepictureinpicture disableremoteplayback tabindex="-1"></video>
+            <video data-src="assets/video.mp4" poster="assets/video-poster.jpg" muted loop playsinline preload="none" disablepictureinpicture disableremoteplayback tabindex="-1"></video>
             <button class="player-toggle" type="button">
               <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
               <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.2-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
             </button>
           </div>
           <div class="caption"><span class="card-title">Video</span><span class="badge">Stable Video Diffusion</span></div>
-          <span class="card-desc" data-i18n="vid.d">Short clips generated from an image, upscaled to 4096×2304 by the same upscaler.</span>
+          <span class="card-desc" data-i18n="vid.d">Short clips generated from an image, upscaled to 4096×2304 by the same upscaler. <a href="assets/video-4k.mp4" target="_blank" rel="noopener">Original ↗</a></span>
         </div>
 
         <div class="card tile span-3">
           <div class="media player">
-            <video src="assets/modello-3d.mp4" autoplay muted loop playsinline preload="metadata" disablepictureinpicture disableremoteplayback tabindex="-1"></video>
+            <video data-src="assets/modello-3d.mp4" poster="assets/modello-3d-poster.jpg" muted loop playsinline preload="none" disablepictureinpicture disableremoteplayback tabindex="-1"></video>
             <button class="player-toggle" type="button">
               <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
               <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.2-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
@@ -206,7 +206,7 @@
         </div>
         <div class="glass frame">
           <div class="media player">
-            <video src="assets/agent.mp4" autoplay muted loop playsinline preload="metadata" disablepictureinpicture disableremoteplayback tabindex="-1"></video>
+            <video data-src="assets/agent.mp4" poster="assets/agent-poster.jpg" muted loop playsinline preload="none" disablepictureinpicture disableremoteplayback tabindex="-1"></video>
             <button class="player-toggle" type="button">
               <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
               <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.2-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
@@ -228,7 +228,7 @@
         </div>
         <div class="glass frame">
           <div class="media player">
-            <video src="assets/rag.mp4" autoplay muted loop playsinline preload="metadata" disablepictureinpicture disableremoteplayback tabindex="-1"></video>
+            <video data-src="assets/rag.mp4" poster="assets/rag-poster.jpg" muted loop playsinline preload="none" disablepictureinpicture disableremoteplayback tabindex="-1"></video>
             <button class="player-toggle" type="button">
               <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
               <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.2-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
@@ -426,7 +426,7 @@
   "img.t": "Immagini",
   "img.b": "FLUX · LoRA · fino a 8K",
   "img.d": "Prompt riscritto dal modello, generazione a circa 2 MP e upscaling 4× fino a 8736×3712.",
-  "vid.d": "Clip brevi a partire da un'immagine, portate a 4096×2304 dallo stesso upscaler.",
+  "vid.d": "Clip brevi a partire da un'immagine, portate a 4096×2304 dallo stesso upscaler. <a href=\"assets/video-4k.mp4\" target=\"_blank\" rel=\"noopener\">Originale ↗</a>",
   "3d.t": "Modelli 3D",
   "3d.d": "Da un'immagine a una mesh esportabile in GLB, pronta per un motore 3D.",
   "music.t": "Musica",
@@ -526,34 +526,42 @@
     try { localStorage.setItem('portfolio-lang', lang); } catch (e) {}
   }));
 
-  /* ---------- Video in loop: nessun controllo di avanzamento, solo pausa e ripresa ---------- */
+  /* ---------- Video in loop: nessun controllo di avanzamento, solo pausa e ripresa ----------
+     Il file si collega solo quando il video entra nello schermo e si stacca quando ne esce:
+     così c'è un decodificatore attivo solo per ciò che si vede. Finché non parte, resta il poster. */
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const players = [];
   document.querySelectorAll('.player').forEach(box => {
     const video = box.querySelector('video');
     const btn = box.querySelector('.player-toggle');
     let userPaused = reduceMotion;
+    let ratio = 0;
     const sync = () => {
-      box.classList.toggle('paused', video.paused);
-      btn.setAttribute('aria-label', video.paused ? LABELS[lang].play : LABELS[lang].pause);
+      box.classList.toggle('paused', userPaused);
+      btn.setAttribute('aria-label', userPaused ? LABELS[lang].play : LABELS[lang].pause);
     };
-    if (reduceMotion) video.removeAttribute('autoplay');
-    video.addEventListener('play', sync);
-    video.addEventListener('pause', sync);
+    const update = () => {
+      const blocked = document.hidden || document.body.classList.contains('lightbox-open');
+      if (ratio >= 0.25 && !userPaused && !blocked) {
+        if (!video.getAttribute('src')) video.src = video.dataset.src;
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+        if (ratio === 0 && video.getAttribute('src')) { video.removeAttribute('src'); video.load(); }
+      }
+    };
     video.addEventListener('contextmenu', e => e.preventDefault());
     document.addEventListener('langchange', sync);
-    btn.addEventListener('click', () => {
-      if (video.paused) { userPaused = false; video.play().catch(() => {}); }
-      else { userPaused = true; video.pause(); }
-    });
-    // Riproduce solo i video visibili.
+    btn.addEventListener('click', () => { userPaused = !userPaused; sync(); update(); });
     new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !userPaused) video.play().catch(() => {});
-        else if (!entry.isIntersecting) video.pause();
-      });
-    }, { threshold: 0.25 }).observe(box);
+      entries.forEach(entry => { ratio = entry.isIntersecting ? entry.intersectionRatio : 0; });
+      update();
+    }, { threshold: [0, 0.25] }).observe(box);
+    players.push(update);
     sync();
   });
+  const updatePlayers = () => players.forEach(update => update());
+  document.addEventListener('visibilitychange', updatePlayers);
 
   /* ---------- Lettore audio ---------- */
   document.querySelectorAll('.audio-player').forEach(player => {
@@ -589,9 +597,8 @@
       document.querySelectorAll('.media.zoomable').forEach(m => m.setAttribute('aria-label', LABELS[lang].zoom));
       closeBtn.setAttribute('aria-label', LABELS[lang].close);
     };
-    // Nel riquadro si mostra subito la versione più grande dello srcset; su schermi ampi
-    // si carica poi l'originale a piena risoluzione, che resta comunque apribile dal link.
-    let pending = null;
+    // Nel riquadro si mostra la versione più grande dello srcset. L'originale pesa decine di MB
+    // e si apre solo dal link, su richiesta.
     const largest = img => {
       const c = (img.getAttribute('srcset') || '').split(',').map(s => s.trim().split(/\s+/)).filter(p => p[0]);
       c.sort((a, b) => parseInt(b[1]) - parseInt(a[1]));
@@ -602,8 +609,6 @@
       big.src = largest(img);
       big.alt = img.alt;
       cap.textContent = img.alt;
-      if (pending) pending.onload = null;
-      pending = null;
       const full = img.dataset.full;
       if (full) {
         const a = document.createElement('a');
@@ -613,23 +618,18 @@
         a.textContent = `${LABELS[lang].original} ${img.dataset.fullSize} ↗`;
         a.addEventListener('click', e => e.stopPropagation());
         cap.append(' · ', a);
-        if (matchMedia('(min-width: 900px)').matches) {
-          const hi = pending = new Image();
-          hi.onload = () => { if (pending === hi && box.classList.contains('open')) big.src = full; };
-          hi.src = full;
-        }
       }
       box.classList.add('open');
       box.setAttribute('aria-hidden', 'false');
       document.body.classList.add('lightbox-open');
+      updatePlayers();
       closeBtn.focus({ preventScroll: true });
     }
     function close() {
-      if (pending) pending.onload = null;
-      pending = null;
       box.classList.remove('open');
       box.setAttribute('aria-hidden', 'true');
       document.body.classList.remove('lightbox-open');
+      updatePlayers();
       if (lastFocus) lastFocus.focus({ preventScroll: true });
     }
     document.querySelectorAll('.media img').forEach(img => {

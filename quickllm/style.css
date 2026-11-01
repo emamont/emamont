@@ -57,14 +57,14 @@ a:hover { text-decoration: underline; }
 
 /* ── Aurora: le stesse quattro luci dell'app ── */
 .aurora-bg { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
-.aurora-bg span { position: absolute; border-radius: 50%; opacity: .55; mix-blend-mode: screen; }
+.aurora-bg span { position: absolute; border-radius: 50%; opacity: .55; }
 .aurora-bg .a1 { width: 54vw; height: 54vw; left: -12vw; top: -14vw; background: radial-gradient(circle, rgba(150,105,255,.55) 0%, rgba(150,105,255,.22) 42%, transparent 74%); }
 .aurora-bg .a2 { width: 48vw; height: 48vw; right: -14vw; top: 6vh; background: radial-gradient(circle, rgba(52,150,230,.44) 0%, rgba(52,150,230,.18) 42%, transparent 74%); }
 .aurora-bg .a3 { width: 42vw; height: 42vw; left: 20vw; bottom: -16vw; background: radial-gradient(circle, rgba(235,160,95,.28) 0%, rgba(235,160,95,.11) 42%, transparent 74%); }
 .aurora-bg .a4 { width: 38vw; height: 38vw; right: 14vw; bottom: 8vh; background: radial-gradient(circle, rgba(60,220,210,.28) 0%, rgba(60,220,210,.11) 42%, transparent 74%); }
 
 /* Riflesso sul vetro */
-.glass-sheen { position: fixed; inset: 0; z-index: 900; pointer-events: none; overflow: hidden; }
+.glass-sheen { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
 .glass-sheen span { position: absolute; border-radius: 50%; opacity: .07; background: radial-gradient(circle, rgba(255,255,255,.9) 0%, rgba(255,255,255,.35) 40%, transparent 70%); }
 .glass-sheen .s1 { width: 34vw; height: 34vw; left: -10vw; top: -6vw; }
 .glass-sheen .s2 { width: 26vw; height: 26vw; right: -8vw; bottom: -4vw; }
@@ -75,8 +75,6 @@ a:hover { text-decoration: underline; }
   border: 1px solid var(--lg-border);
   border-radius: calc(var(--radius) + 2px);
   box-shadow: var(--lg-hi), var(--float-shadow-soft);
-  backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-sat));
-  -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-sat));
 }
 
 .wrap { width: min(1160px, 100% - 28px); margin: 0 auto; }
@@ -144,8 +142,8 @@ section { padding: 56px 0; }
   position: absolute; right: 10px; bottom: 10px; z-index: 2;
   width: 34px; height: 34px; border-radius: 999px; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
-  background: rgba(8, 12, 20, .62); border: 1px solid rgba(255,255,255,.14);
-  color: var(--text); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  background: rgba(8, 12, 20, .8); border: 1px solid rgba(255,255,255,.14);
+  color: var(--text);
   opacity: 0; transition: opacity .2s ease, background .18s ease;
 }
 .player:hover .player-toggle, .player.paused .player-toggle, .player-toggle:focus-visible { opacity: 1; }
@@ -185,7 +183,7 @@ section { padding: 56px 0; }
 .media.zoomable::after {
   content: ""; position: absolute; top: 10px; right: 10px; z-index: 2; width: 32px; height: 32px; border-radius: 999px;
   background: rgba(8, 12, 20, .62) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f0ede6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7'/%3E%3C/svg%3E") center / 14px no-repeat;
-  border: 1px solid rgba(255,255,255,.14); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.14);
   opacity: 0; transform: scale(.9); transition: opacity .2s ease, transform .2s ease;
 }
 .media.zoomable:hover::after, .media.zoomable:focus-visible::after { opacity: 1; transform: none; }
@@ -194,7 +192,7 @@ section { padding: 56px 0; }
 .lightbox {
   position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center;
   padding: max(68px, env(safe-area-inset-top)) 24px max(28px, env(safe-area-inset-bottom));
-  background: rgba(6, 9, 16, .78); backdrop-filter: blur(18px) saturate(130%); -webkit-backdrop-filter: blur(18px) saturate(130%);
+  background: rgba(6, 9, 16, .94);
   opacity: 0; visibility: hidden; transition: opacity .28s ease, visibility 0s linear .28s; cursor: zoom-out;
 }
 .lightbox.open { opacity: 1; visibility: visible; transition: opacity .28s ease; }
@@ -228,7 +226,6 @@ body.lightbox-open { overflow: hidden; }
     rgba(255,255,255,.03);
   border: 1px solid var(--glass-border);
   box-shadow: 0 18px 58px rgba(0,0,0,.26);
-  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
 }
 .brand-row { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 16px; }
 .brand-mark {
@@ -252,8 +249,6 @@ body.lightbox-open { overflow: hidden; }
   background: var(--lg-sheen), var(--lg-tint);
   border: 1px solid var(--lg-border);
   box-shadow: var(--lg-hi), var(--float-shadow-soft);
-  backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-sat));
-  -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-sat));
 }
 .card-title { display: block; font-family: var(--font-serif); font-size: 19px; line-height: 1.2; color: var(--text); margin-bottom: 7px; }
 .card-desc { display: block; font-size: 12.5px; line-height: 1.7; color: var(--text-muted); }
